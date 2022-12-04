@@ -13,7 +13,7 @@ export function Mostrar() {
   const [nombre, setNombre] = useState('');
   const [fecha, setFecha] = useState('');
   useEffect(() => {
-    axios.get('http://localhost:8000/reconocimiento')
+    axios.get('https://paseo-central.onrender.com/usuarios')
       .then(res => {
         console.log(res.data);
         setSeries(res.data);
@@ -21,7 +21,7 @@ export function Mostrar() {
   })
 
   function mostrar(cod, Mostrar) {
-    axios.get('http://localhost:8000/reconocimiento/' + cod)
+    axios.get('https://paseo-central.onrender.com/usuarios' + cod)
       .then(res => {
         setPos(Mostrar);
         setId(res.data.id);
@@ -37,14 +37,14 @@ export function Mostrar() {
         <table className='table'>
           <thead className='table-dark'>
             <tr>
+              <th className='border border-solid border-2 border-green-600'>ID</th>
               <th className='border border-solid border-2 border-green-600'>DNI</th>
-              <th className='border border-solid border-2 border-green-600'>Nombre</th>
-              <th className='border border-solid border-2 border-green-600'>Apellidos</th>
-              <th className='border border-solid border-2 border-green-600'>Correo</th>
-              <th className='border border-solid border-2 border-green-600'>Celular</th>
-              <th className='border border-solid border-2 border-green-600'>Dirección</th>
-              <th className='border border-solid border-2 border-green-600'>Distrito</th>
-              <th className='border border-solid border-2 border-green-600'>Genero</th>
+              <th className='border border-solid border-2 border-green-600'>NOMBRE</th>
+              <th className='border border-solid border-2 border-green-600'>APELLIDO</th>
+              <th className='border border-solid border-2 border-green-600'>CORREO</th>
+              <th className='border border-solid border-2 border-green-600'>CELULAR</th>
+              <th className='border border-solid border-2 border-green-600'>DISTRITO</th>
+              <th className='border border-solid border-2 border-green-600'>GENERO</th>
               
               
             </tr>
@@ -53,9 +53,14 @@ export function Mostrar() {
             {series.map((serie, Mostrar) => {
               return (
                 <tr key={serie.id}>
-                  <td className='border border-solid border-2 border-green-600'>{serie.codigoReconocimiento}</td>
-                  <td className='border border-solid border-2 border-green-600'>{serie.fotoReconocimiento}</td>
-                  <td className='border border-solid border-2 border-green-600'>{serie.Hora}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.id}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.dni}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.nombre}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.apellidos}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.correo}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.celular}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.distrito}</td>
+                  <td className='border border-solid border-2 border-green-600'>{serie.genero}</td>
                 </tr>
               );
             })}
