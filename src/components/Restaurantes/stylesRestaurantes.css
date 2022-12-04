@@ -1,0 +1,47 @@
+.cardi {
+    width: 255px;
+    padding: 20px;
+}
+
+.imgsres {
+    border-radius: 50px;
+    align-items: center;
+}
+
+.polaroid {
+    width: 100%;
+
+}
+
+/* .contenedor {
+    background-image: url("https://album.es/fotos/uploads/imagenes/thumbs/guirnarldas-de-navidad-fondo-para-albumes-hofmann-classic_navidades-6-classic_1200px.jpg");
+    height: 565px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+} */
+
+
+.center {
+    margin: 105px;
+    width: 1500;
+
+}
+
+
+
+.imgRestaurantes {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    margin: 15px;
+    -webkit-transition: margin 0.2s ease-out;
+    -moz-transition: margin 0.2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+}
+
+.imgRestaurantes:hover {
+    margin-top: 4px;
+}

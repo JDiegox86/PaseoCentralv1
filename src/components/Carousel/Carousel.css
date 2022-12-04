@@ -1,0 +1,15 @@
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 70px;
+    width: 70px;
+    outline: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 20%;
+    border: 3px solid rgb(255, 255, 255);
+    
+}
+.imgs{
+	border-radius: 50px;
+	align-items: center;	
+
+}
